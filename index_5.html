@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index_5</title>
+	<script type="text/javascript">
+		function gotoURL(){
+			var data = document.getElementById('txt1').value;
+			document.getElementById('if1').src = data;
+		}
+		function resize(){
+			var wth = document.getElementById('txt2').value;
+			var hght = document.getElementById('txt3').value;
+			document.getElementById('if1').style.width = wth + "px";
+			document.getElementById('if1').style.height = hght + "px";
+		}
+	</script>
+	<style>
+		<style>
+		#root {
+	        width: 100vw;
+	        height: 100vh;
+	        padding-left: 25vw;
+	        padding-right: 25vw;
+	    }
+	    #root1 {
+	    	width: 50vw;
+	    	height: 50vh;
+	    	margin-bottom: 2vh;
+	    	margin-left: 25vw;
+	    }   
+	    
+
+	    #root2 {
+	    	width: 50vw;
+	    	margin-bottom: 3vh;
+	    	margin-left: 25vw;
+	    }
+
+
+	    /* iframe itself */
+	    #if1 {
+	        width: 50vw;
+	        height: 50vh;
+	        border: groove;
+	    }
+	    input{
+	    	padding-right: 2vw;
+	    	padding-left: 2vw;
+	    	padding-top: 2vh;
+	    	padding-bottom: 2vh;
+	    }
+
+	    #txt1{
+	    	width: 30vw;
+	    	margin-left: 2vw;
+	    	margin-right: 1vw;
+	    }
+	    #txt2{
+	    	width: 11.5vw;
+	    }
+	    #txt3{
+	    	width: 11.5vw;
+	    }
+
+	    #b1{
+	    	width: 8vw;
+	    	margin-left: 2vw;
+	    	margin-right: 1vw;
+	    }
+	    #b2{
+	    	width: 9.5vw;
+	    	margin-left: 2vw;
+	    }
+
+	</style>
+</head>
+<body>
+	<h1 align="center">My mini-browser</h1>
+	<div id="root">
+		<div id = 'root1'>
+			<iframe id = "if1" src="https://www.google.com/webhp?igu=1" class="frame-area"></iframe>
+		</div>
+		<div id="root2">
+			<input type="text" id="txt1" value="https://">
+			<input type="button" id = 'b1' value="GO" onclick="gotoURL()">
+			<br><br>
+			Width<input type="text" id = "txt2" value = "" >
+			Height<input type="text" id="txt3" value="">
+			<input type="button" value="Re-size" id="b2" onclick="resize()">
+		</div>
+		
+	</div>
+</body>
+</html>
