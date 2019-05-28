@@ -8,7 +8,7 @@
 		document.getElementById("if1").src = "https://wikipedia.org/"
 	}
 	function changeSrc2(){
-		document.getElementById("if1").src = "https://webmail.iitk.ac.in/"
+		document.getElementById("if1").src = "https://www.google.com/webhp?igu=1"
 	}
 	function changeSrc3(){
 		document.getElementById("if1").src = "http://iitk.ac.in/"
@@ -17,58 +17,56 @@
 
 	<style>
 		#root {
-	        position: fixed;
-	        width: 100%;
-	        height: 100%;
-	        align-content: center;
-	        padding-left: 25%;
+	        width: 100vw;
+	        height: 100vh;
+	        padding-left: 25vw;
+	        padding-right: 25vw
 	    }
-
-	    #root1{
-	    	padding-left: 15%;
-	    }
-
+	    #root1 {
+	    	width: 50vw;
+	    	height: 50vh;
+	    	margin-bottom: 2vh;
+	    }   
 	    
 
 	    #root2 {
-	    	width: 50%;
-	    	height: 50%;
+	    	width: 50vw;
+	    	margin-bottom: 3vh;
 	    }
 
 
 	    /* iframe itself */
 	    #if1 {
-	        display: block;
-	        width: 100%;
-	        height: 100%;
+	        width: 50vw;
+	        height: 50vh;
 	        border: groove;
 	    }
 
-	    #b1 {
-	    	padding: 12px;
-	    }
-	    #b2 {
-	    	padding: 12px;
-	    }
-	    #b3 {
-	    	padding: 12px;
+	    input{
+	    	padding-right: 2vw;
+	    	padding-left: 2vw;
+	    	padding-top: 2vh;
+	    	padding-bottom: 2vh;
+	    	margin-left: 1vw;
+	    	margin-right: 1vw;
 	    }
 	</style>
 </head>
 <body>
 	<h1 align="center">My First sub-window</h1>
 	<div id="root">
-		<div id="root1">
-			<h3>
-				<input type="button" id = 'b1' value="Wikipedia" onclick="changeSrc1()">
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="button" id = 'b2' value="IITK Webmail" onclick="changeSrc2()">
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="button"  id = 'b3' value="IITK" onclick="changeSrc3()">
-			</h3>
+		<div id = 'root1'>
+			<iframe id = "if1" src="https://timesofindia.indiatimes.com/" ></iframe>
+			
 		</div>
-		<div id = 'root2'>
-			<iframe id = "if1" src="https://timesofindia.indiatimes.com/" class="frame-area"></frame>
+		<div id="root2">
+			<center>
+				<input type="button" id = 'b1' value="Wikipedia" onclick="changeSrc1()">
+				
+				<input type="button" id = 'b2' value="Google" onclick="changeSrc2()">
+				
+				<input type="button"  id = 'b3' value="IITK" onclick="changeSrc3()">
+			</center>
 		</div>
 	</div>
 	
